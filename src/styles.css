@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:700,900");
 
 .head {
-  background: radial-gradient(#fff, #aaa);
+  background: radial-gradient(rgb(19, 18, 18), rgb(58, 54, 54));
   background-size: 100vw 90vh;
   overflow: hidden;
   padding: 0.1vh;
@@ -13,8 +13,9 @@ input::placeholder {
 
 input {
   font-size: 23px;
-  /* position: relative;
-  left: 30px; */
+  position: relative;
+  left: 2px;
+  top: 23px;
   margin: auto;
   height: 30px;
   width: 280px;
@@ -35,16 +36,16 @@ h1 {
 @keyframes netflix_style {
   0% {
     text-shadow: makelongshadow(100, 1);
-    color: #f3f3f3;
+    color: #070404;
     transform: scale(1.5, 1.5);
   }
   10% {
     text-shadow: makelongshadow(100, 1.5);
-    color: #f3f3f3;
+    color: #080606;
     transform: scale(1.5, 1.5);
   }
   15% {
-    color: #f3f3f3;
+    color: #160808;
   }
   20% {
     color: #e90418;
@@ -75,6 +76,16 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.filterContainer {
+  position: relative;
+  bottom: 4px;
+  left: 330px;
+}
+
+.filterContainer select {
+  font-size: 17px !important;
 }
 
 .container {
