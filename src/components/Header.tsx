@@ -1,28 +1,29 @@
-import { searchProps } from "./AllEpisodes";
+import { searchProps } from "../utils/Interfaces";
 import SearchBox from "./SearchBox";
 import { useState } from "react";
 import episodes from "../episodes.json";
 import FilterBy from "./FilterBy";
+import { IEpisode } from "../utils/Interfaces";
 
 
-export interface IEpisode {
-  id: number;
-  url: string;
-  name: string;
-  season: number;
-  number: number;
-  type: string;
-  airdate: string;
-  airtime: string;
-  airstamp: string;
-  runtime: number;
-  image: {
-    medium: string;
-    original: string;
-  };
-  summary: string;
-  _links: { self: { href: string } };
-}
+// export interface IEpisode {
+//   id: number;
+//   url: string;
+//   name: string;
+//   season: number;
+//   number: number;
+//   type: string;
+//   airdate: string;
+//   airtime: string;
+//   airstamp: string;
+//   runtime: number;
+//   image: {
+//     medium: string;
+//     original: string;
+//   };
+//   summary: string;
+//   _links: { self: { href: string } };
+// }
 
 const Header = ({ searchTerm, setSearchTerm }: searchProps): JSX.Element => {
    const [displayedEpisodes, setDisplayedEpisodes] =

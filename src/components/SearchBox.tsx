@@ -1,6 +1,9 @@
-import { searchProps as searchBoxProps} from "./AllEpisodes";
+import { searchProps as searchBoxProps } from "../utils/Interfaces";
 
-const SearchBox = ({ searchTerm, setSearchTerm }: searchBoxProps): JSX.Element => {
+const SearchBox = ({
+  searchTerm,
+  setSearchTerm,
+}: searchBoxProps): JSX.Element => {
   return (
     <>
       <input

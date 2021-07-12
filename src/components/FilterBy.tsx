@@ -1,4 +1,4 @@
-import { IEpisode } from "./Header";
+import { IEpisode } from "../utils/Interfaces";
 
 interface FilterProps {
   displayedEpisodes: IEpisode[];

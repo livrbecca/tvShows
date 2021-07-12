@@ -1,11 +1,12 @@
 import Episode from "./Episode";
 import episodes from "../episodes.json";
+import {searchProps} from '../utils/Interfaces'
 
 
-export interface searchProps {
-  searchTerm: string;
-  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-}
+// export interface searchProps {
+//   searchTerm: string;
+//   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+// }
 
 const AllEpisodes = ({
   setSearchTerm,
@@ -28,7 +29,7 @@ const AllEpisodes = ({
 
   return (
     <>
-      {/* pass down episodes data twice */}
+    
      
       {filterEps.map((ep, key) => (
         <div key={key} className="item">
