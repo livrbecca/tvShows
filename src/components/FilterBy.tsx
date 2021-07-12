@@ -1,10 +1,4 @@
-import { IEpisode } from "../utils/Interfaces";
-
-interface FilterProps {
-  displayedEpisodes: IEpisode[];
-  originalData: IEpisode[];
-  setDisplayedEpisodes: React.Dispatch<React.SetStateAction<IEpisode[]>>;
-}
+import { FilterProps } from "../utils/Interfaces";
 
 const FilterBy = ({
   displayedEpisodes,

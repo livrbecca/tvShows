@@ -22,3 +22,9 @@ export interface IEpisode {
   summary: string;
   _links: { self: { href: string } };
 }
+
+export interface FilterProps {
+  displayedEpisodes: IEpisode[];
+  originalData: IEpisode[];
+  setDisplayedEpisodes: React.Dispatch<React.SetStateAction<IEpisode[]>>;
+}

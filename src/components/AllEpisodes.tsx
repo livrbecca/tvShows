@@ -1,20 +1,12 @@
 import Episode from "./Episode";
 import episodes from "../episodes.json";
-import {searchProps} from '../utils/Interfaces'
-
-
-// export interface searchProps {
-//   searchTerm: string;
-//   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
-// }
+import { searchProps } from "../utils/Interfaces";
 
 const AllEpisodes = ({
   setSearchTerm,
   searchTerm,
 }: searchProps): JSX.Element => {
- 
-
-  const filterEps = episodes.filter((value) => {
+  const searchBarEps = episodes.filter((value) => {
     if (searchTerm === "") {
       return true;
     } else if (
@@ -29,9 +21,7 @@ const AllEpisodes = ({
 
   return (
     <>
-    
-     
-      {filterEps.map((ep, key) => (
+      {searchBarEps.map((ep, key) => (
         <div key={key} className="item">
           <Episode
             id={ep.id}
