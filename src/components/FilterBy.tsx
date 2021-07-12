@@ -1,4 +1,5 @@
 import { FilterProps } from "../utils/Interfaces";
+import { seasonLayoutDecider, episodeLayoutDecider } from "../utils/Function";
 
 const FilterBy = ({
   displayedEpisodes,
@@ -9,20 +10,11 @@ const FilterBy = ({
     <div className="filterContainer">
       <select className="mainButton" name="Select an episode">
         {originalData.map((val, key) => (
-          <option key={val.id} value={val.id}>
-            {val.season < 10
-              ? "S" + val.season.toString().padStart(2, "0")
-              : "S" + val.season}
-            {val.number < 10
-              ? "E" + val.number.toString().padStart(2, "0")
-              : "E" + val.number}{" "}
-            - {val.name}
+          <option key={key} value={val.id}>
+            {seasonLayoutDecider(val.season)}
+            {episodeLayoutDecider(val.number)}- {val.name}
           </option>
         ))}
-
-        {/* {originalData.map((epDetails, key) => (
-          <Dropdown.Item key={key}>{epDetails.season}</Dropdown.Item>
-        ))} */}
       </select>
     </div>
   );
