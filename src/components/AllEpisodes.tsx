@@ -1,27 +1,27 @@
 import Episode from "./Episode";
 import episodes from "../episodes.json";
-import { searchProps } from "../utils/Interfaces";
-
+import { IEpisode, searchProps } from "../utils/Interfaces";
+import { searchBarEps } from "../utils/Function";
 const AllEpisodes = ({
   setSearchTerm,
   searchTerm,
 }: searchProps): JSX.Element => {
-  const searchBarEps = episodes.filter((value) => {
-    if (searchTerm === "") {
-      return true;
-    } else if (
-      value.summary.toLocaleLowerCase().includes(searchTerm) ||
-      value.name.toLocaleLowerCase().includes(searchTerm)
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  });
-
+  // const searchBarEps = episodes.filter((value) => {
+  //   if (searchTerm === "") {
+  //     return true;
+  //   } else if (
+  //     value.summary.toLocaleLowerCase().includes(searchTerm) ||
+  //     value.name.toLocaleLowerCase().includes(searchTerm)
+  //   ) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // });
+  //const forSearchBox = searchBarEps({ episodes, searchTerm });
   return (
     <>
-      {searchBarEps.map((ep, key) => (
+      {searchBarEps(episodes, searchTerm).map((ep: IEpisode, key: number) => (
         <div key={key} className="item">
           <Episode
             id={ep.id}

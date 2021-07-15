@@ -1,6 +1,7 @@
 import { searchProps as searchBoxProps } from "../utils/Interfaces";
 
 const SearchBox = ({
+  episodes,
   searchTerm,
   setSearchTerm,
 }: searchBoxProps): JSX.Element => {

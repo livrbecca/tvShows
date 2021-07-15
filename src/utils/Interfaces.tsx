@@ -1,8 +1,8 @@
 export interface searchProps {
   searchTerm: string;
+  episodes: IEpisode[];
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
-
 
 export interface IEpisode {
   id: number;
@@ -24,7 +24,6 @@ export interface IEpisode {
 }
 
 export interface FilterProps {
-  displayedEpisodes: IEpisode[];
   originalData: IEpisode[];
-  setDisplayedEpisodes: React.Dispatch<React.SetStateAction<IEpisode[]>>;
+  episodes: IEpisode[];
 }

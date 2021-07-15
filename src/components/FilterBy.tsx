@@ -1,11 +1,7 @@
 import { FilterProps } from "../utils/Interfaces";
 import { seasonLayoutDecider, episodeLayoutDecider } from "../utils/Function";
 
-const FilterBy = ({
-  displayedEpisodes,
-  originalData,
-  setDisplayedEpisodes,
-}: FilterProps): JSX.Element => {
+const FilterBy = ({ originalData }: FilterProps): JSX.Element => {
   return (
     <div className="filterContainer">
       <select className="mainButton" name="Select an episode">
