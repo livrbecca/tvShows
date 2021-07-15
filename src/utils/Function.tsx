@@ -21,3 +21,7 @@ export function searchBarEps(
       value.name.toLocaleLowerCase().includes(searchTerm)
   );
 }
+
+export function selectDropdown(episodes: IEpisode[], id: number): IEpisode[]{
+  return episodes.filter((ep)=> ep.id === id)
+}

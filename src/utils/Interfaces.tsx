@@ -27,3 +27,8 @@ export interface FilterProps {
   originalData: IEpisode[];
   episodes: IEpisode[];
 }
+
+export interface DropdownProps {
+  selectedOption: string;
+  setSelectedOption: React.Dispatch<React.SetStateAction<string>>;
+}

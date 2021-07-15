@@ -3,22 +3,8 @@ import episodes from "../episodes.json";
 import { IEpisode, searchProps } from "../utils/Interfaces";
 import { searchBarEps } from "../utils/Function";
 const AllEpisodes = ({
-  setSearchTerm,
   searchTerm,
 }: searchProps): JSX.Element => {
-  // const searchBarEps = episodes.filter((value) => {
-  //   if (searchTerm === "") {
-  //     return true;
-  //   } else if (
-  //     value.summary.toLocaleLowerCase().includes(searchTerm) ||
-  //     value.name.toLocaleLowerCase().includes(searchTerm)
-  //   ) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // });
-  //const forSearchBox = searchBarEps({ episodes, searchTerm });
   return (
     <>
       {searchBarEps(episodes, searchTerm).map((ep: IEpisode, key: number) => (
